@@ -8,6 +8,7 @@ include("includes/classes/Song.php");
 
 if(isset($_SESSION['userLoggedIn'])) {
 	$userLoggedIn = $_SESSION['userLoggedIn'];
+	echo "<script>userLoggedIn = '$userLoggedIn';</script>";
 }
 else {
 	header("Location: register.php");
@@ -19,6 +20,8 @@ else {
 <head>
 	<title>Welcome to Slotify!</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+	<script src="assets/js/script.js"></script>
 </head>
 
 <body>
