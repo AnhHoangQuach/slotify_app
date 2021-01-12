@@ -1,8 +1,11 @@
 <?php
 	ob_start();
-	session_start();
+	if(!isset($_SESSION)) 
+    { 
+        session_start();
+    }
 
-	$timezone = date_default_timezone_set("Europe/London");
+	$timezone = date_default_timezone_set("Asia/Saigon");
 
 	$con = mysqli_connect("localhost", "root", "", "slotify");
 

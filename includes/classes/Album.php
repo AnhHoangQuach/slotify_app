@@ -20,6 +20,10 @@
             $this->artworkPath = $album['artworkPath'];
         }
 
+        public function getId() {
+            return $this->id;
+        }
+
         public function getTitle() {
             return $this->title;
         }
@@ -28,8 +32,18 @@
             return new Artist($this->con, $this->artistId);
         }
 
+        public function getArtistId() {
+            return $this->artistId;
+        }
+
         public function getGenre() {
             return $this->genre;
+        }
+
+        public function getGenreName() {
+            $query = mysqli_query($this->con, "SELECT * FROM genres WHERE id='$this->genre'");
+            $row = mysqli_fetch_array($query);
+            return $row['name'];
         }
 
         public function getArtworkPath() {
@@ -42,7 +56,7 @@
         }
 
         public function getSongIds() {
-            $query = mysqli_query($this->con, "SELECT id FROM songs WHERE album='$this->id' ORDER BY albumOrder ASC");
+            $query = mysqli_query($this->con, "SELECT id FROM songs WHERE album='$this->id' ORDER BY plays DESC");
             $array = array();
 
             while($row = mysqli_fetch_array($query)) {

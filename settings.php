@@ -4,12 +4,15 @@
 
 <div class="entityInfo">
     <div class="centerSection">
-        <div class="userInfo">
-            <h1><?php echo $userLoggedIn->getFirstAndLastName(); ?></h1>
+        <div class="user-avatar">
+            <img src="/assets/images/profile-pics/head_emerald.png" alt="">
         </div>
-        <div class="buttonItems">
-            <button class="button" onclick="openPage('updateDetails.php');">USER DETAILS</button>
-            <button class="button" onclick="logout()">LOGOUT</button>
+        <div class="userInfo text-center">
+            <h1><?php echo $userLoggedIn->getFullname(); ?></h1>
         </div>
+        <ul class="button-menu">
+            <li onclick="openPage('updateDetails.php');"><span>User Details</span></li>
+            <li onclick="logout()"><span>Log out</span></li>
+        </ul>
     </div>
 </div>

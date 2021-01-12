@@ -5,7 +5,11 @@
         $username = $_POST['username'];
         $date = date("Y-m-d");
 
-        $query = mysqli_query($con, "INSERT INTO playlists VALUES('', '$name', '$username', '$date')");
+        $check = mysqli_query($con, "SELECT id FROM users WHERE username='$username'");
+        $check_id = mysqli_fetch_array($check);
+        $userId = $check_id['id'];
+
+        $query = mysqli_query($con, "INSERT INTO playlists VALUES('', '$name', $userId, '$date')");
     } else {
         echo "Name or username parameters not passed into file";
     }

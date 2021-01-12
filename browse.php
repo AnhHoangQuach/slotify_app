@@ -1,22 +1,45 @@
 <?php
 	include("includes/includedFiles.php"); 
 ?>
+		<div class="container">
+			<div class="slick-list">
+				<div class="slick-track">
+					<img src="/assets/images/slide/slide1.jpg" alt="">
+				</div>
+				<div class="slick-track">
+					<img src="/assets/images/slide/slide2.jpg" alt="">
+				</div>
+				<div class="slick-track">
+					<img src="/assets/images/slide/slide3.jpg" alt="">
+				</div>
+			</div>
+			<?php 
+				include("listMusic.php")
+			?>
+			<?php
+				include("zingchart.php")
+			?>
+			<?php 
+				include("zingrelease.php")
+			?>
+		<script type="text/javascript" src="/assets/slick/slick.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.slick-list').slick({
+					autoplay: true,
+					autoplaySpeed: 2000, //DELAY BEFORE NEXT SLIDE IN MILISECONDS
+					speed: 800 //SPEED OF THE SLIDER CHANGE
+				});
 
-	<h1 class="pageHeadingBig">You Might Also Like</h1>
-	<div class="gridViewContainer">
-		<?php 
-			$albumQuery = mysqli_query($con, "SELECT * FROM albums ORDER BY RAND() LIMIT 10");
-			while($row = mysqli_fetch_array($albumQuery)) {
-				
+				$('.album-list').slick({
+					infinite: true,
+					slidesToShow: 5,
+					slidesToScroll: 5
+				})
+			});
+		</script>
+	</main>
 
-				echo "<div class='gridViewItem'>
-						<span role='link' tabindex='0' onclick='openPage(\"album.php?id=" . $row['id'] . "\")'>
-							<img src='" . $row['artworkPath'] . "'>
-							<div class='gridViewInfo'>
-								" . $row['title'] . "
-							</div>
-						</span>
-					</div>";
-			}
-		?>
-	</div>
+	<?php 
+		include("includes/footer.php");
+	?>

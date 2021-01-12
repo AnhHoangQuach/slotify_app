@@ -8,6 +8,9 @@
         $row = mysqli_fetch_array($orderQuery);
         $order = $row['playlistOrder'];
         $query = mysqli_query($con, "INSERT INTO playlistsongs VALUES ('', '$songId', '$playlistId', '$order')");
+        if($query == true) {
+            echo "Add music success";
+        }
     } else {
         echo "PlaylistId or songId was not passed into addToPlaylist.php";
     }
