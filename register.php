@@ -17,7 +17,7 @@
 
 <html>
 <head>
-	<title>Welcome to Slotify!</title>
+	<title>NAH05</title>
 
 	<link rel="stylesheet" type="text/css" href="/assets/css/register.css">
 	<link rel="stylesheet" type="text/css" href="/assets/css/util.css">
@@ -26,7 +26,7 @@
 	<link rel="stylesheet" type="text/css" href="/assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="/assets/fonts/iconic/css/material-design-iconic-font.min.css">
 	<link rel="stylesheet" type="text/css" href="../vendor/animate/animate.css">
-	<link rel="icon" href="../assets/images/icons/logoicon.jpg">
+	<link rel="icon" href="../assets/images/logomain.jpg">
 	<script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
 	<script src="/assets/js/login.js"></script>
 	<script src="/assets/js/register.js"></script>

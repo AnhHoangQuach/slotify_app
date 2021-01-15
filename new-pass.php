@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="/assets/css/adminlte.min.css">
     <script src="/assets/plugins/jquery/jquery.min.js"></script>
     <script src="/assets/plugins/bootstrap/bootstrap.min.js"></script>
-    <link rel="icon" href="/assets/images/icons/logoicon.jpg">
+    <link rel="icon" href="/assets/images/logomain.jpg">
 </head>
 <?php
 include("includes/config.php");

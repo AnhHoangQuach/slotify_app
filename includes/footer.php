@@ -1,7 +1,7 @@
 		<div class="t-separation-line"></div>
 		<div class="t-box-infor-company" style="height: 250px;">
 			<div>
-				<a href="https://www.nhaccuatui.com/" target="_blank" title="NhacCuaTui">
+				<a href="/" title="NAH05">
 				<span class="t-logo-company"></span>
 				</a>
 			</div>

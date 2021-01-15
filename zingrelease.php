@@ -1,6 +1,3 @@
-<?php 
-    $query = mysqli_query($con, "SELECT albums.* , COUNT(comments.id) AS TongComment FROM albums INNER JOIN comments on albums.id = comments.album GROUP BY albums.id HAVING COUNT(comments.id) >= ANY(SELECT COUNT(comments.id) FROM albums,comments WHERE albums.id = comments.album GROUP BY albums.id ) ORDER BY TongComment DESC LIMIT 3");
-?>
 <div class="container new-release-slider channel-section mar-t-30">
     <h2 class="title">Đánh giá</h2>
 </div>
@@ -9,6 +6,7 @@
     <div class="zm-carousel-item">
         <?php
             $i = 1;
+            $query = mysqli_query($con, "SELECT albums.* , COUNT(comments.id) AS TongComment FROM albums INNER JOIN comments on albums.id = comments.album GROUP BY albums.id HAVING COUNT(comments.id) >= ANY(SELECT COUNT(comments.id) FROM albums,comments WHERE albums.id = comments.album GROUP BY albums.id ) ORDER BY TongComment DESC LIMIT 3");
             while($row = mysqli_fetch_array($query)) {
                 $album = new Album($con, $row['id']);
                 $artist = new Artist($con, $album->getArtistId());

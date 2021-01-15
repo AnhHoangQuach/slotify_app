@@ -14,7 +14,7 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="../assets/css/adminlte.min.css">
     <link rel="stylesheet" href="../assets/css/admin.css">
-    <link rel="icon" href="../assets/images/icons/logoicon.jpg">
+    <link rel="icon" href="../assets/images/logomain.jpg">
     <!-- REQUIRED SCRIPTS -->
     <!-- jQuery -->
     <script src="../assets/plugins/jquery/jquery.min.js"></script>
