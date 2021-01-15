@@ -73,7 +73,7 @@
                             while($rows = mysqli_fetch_array($query)) {
                                 echo '
                                 <div class="col-md-3 col-xs-6 mar-bottom-15">
-                                    <span role="link" tabindex="0" onclick="openPage(\'title.php?id=' . $row['id'] . '\'); window.location.reload();">
+                                    <span role="link" tabindex="0" onclick="openPage(\'title.php?id=' . $rows['id'] . '\'); window.location.reload();">
                                         <div class="card-210-118">
                                             <div class="lazyload-img loaded">
                                                 <img src="' . $rows['image'] . '" alt="">
