@@ -55,10 +55,10 @@
 	
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('/assets/images/bg-01.jpg');">
-			<div class="wrap-login100 p-l-30 p-r-30 p-t-20 p-b-20">
+			<div class="wrap-login100 p-l-30 p-r-30 p-t-20">
 				<form id="loginForm" class="login100-form validate-form" action="./register.php" method="POST">
 					<div class="login_header">
-						<a href="">
+						<a href="/">
 							<img src="../assets/images/logomain.jpg" class="logo-login" alt="">
 						</a>
 						<span class="login100-form-title">
@@ -102,7 +102,9 @@
 
 				<form id="registerForm" class="login100-form validate-form" action="register.php" method="POST">
 					<div class="login_header">
-						<a href="" class="logo-login"></a>
+						<a href="/">
+							<img src="../assets/images/logomain.jpg" class="logo-login" alt="">
+						</a>
 						<span class="login100-form-title">
 							Register
 						</span>
