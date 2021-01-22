@@ -10,7 +10,7 @@
 					<img src="/assets/images/slide/slide2.jpg" alt="">
 				</div>
 				<div class="slick-track">
-					<img src="/assets/images/slide/slide3.jpg" alt="">
+					<img src="/assets/images/slide/slide3.jpg" width="1026px" height="343px" alt="">
 				</div>
 			</div>
 			<?php 
