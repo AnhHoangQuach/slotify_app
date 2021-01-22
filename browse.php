@@ -1,5 +1,5 @@
 <?php
-	include("includes/includedFiles.php"); 
+	include("includes/includedFiles.php");
 ?>
 		<div class="container">
 			<div class="slick-list">
@@ -39,7 +39,7 @@
 			});
 		</script>
 	</main>
-
 	<?php 
 		include("includes/footer.php");
 	?>
+	<?php include("nowPlayingBar.php"); ?>

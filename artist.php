@@ -74,7 +74,7 @@
                 
 
                 echo "<div class='gridViewItem  artist-album'>
-                        <span role='link' tabindex='0' onclick='openPage(\"album.php?id=" . $row['id'] . "\"); window.location.reload();'>
+                        <span role='link' tabindex='0' onclick='openPage(\"album.php?id=" . $row['id'] . "\");'>
                             <img src='../" . $row['artworkPath'] . "'>
                             <div class='gridViewInfo'>
                                 " . $row['title'] . "
@@ -97,4 +97,5 @@
     <?php 
         include("includes/footer.php");
     ?>
+    <?php include("nowPlayingBar.php"); ?>
 </div>

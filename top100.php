@@ -1,11 +1,19 @@
 <?php
-    include("includes/config.php");
+    include("includes/includedFiles.php");
 ?>
 <head>
-	<link rel="stylesheet" href="/assets/css/adminlte.min.css">
+    <link rel="stylesheet" href="../assets/css/adminlte.min.css">
+    <style>
+        .progress {
+            background-color: #a0a0a0;
+            height: 4px;
+            border-radius: 2px;
+        }
+    </style>
 </head>
 <?php
-    include("includes/header.php");
+    // pagination
+
     $result = mysqli_query($con, 'select count(*) as total from songs');
     $row = mysqli_fetch_array($result);
     $total_records = $row['total'];
@@ -37,7 +45,6 @@
     
     $result = mysqli_query($con, "SELECT * FROM songs ORDER BY id $sort LIMIT $start, $limit");
 ?>
-
 <div class="container">
     <div class="tile_box_key">
         <h1>TOP 100 VIỆT NAM</h1>
@@ -79,7 +86,7 @@
                             </div>
                             <div class='box-text-info'>
                                 <div class='box-title-music'>" . $song->getTitle() . "</div>
-                                <span onclick='openPage(\"artist.php?id=" . $artist->getId() . "\"); window.location.reload();' class='box-artist'>" . $artist->getName() . "</span>
+                                <span onclick='openPage(\"artist.php?id=" . $artist->getId() . "\");' class='box-artist'>" . $artist->getName() . "</span>
                             </div>
                             <div class='box-play'>
                                 <a href='includes/handlers/ajax/download.php?file=" . $name[2] . "'><img class='download-button' src='/assets/images/icons/download.png'></a>
@@ -142,10 +149,11 @@
             </div>
         </div>
     </div>
+    <?php 
+        include("includes/footer.php");
+    ?>
 </div>
-<?php 
-    include("includes/footer.php");
-?>
+<?php include("nowPlayingBar.php"); ?>
 <script>
     var tempSongIds = '<?php echo json_encode($songIdArray); ?>';
     tempPlaylist = JSON.parse(tempSongIds);

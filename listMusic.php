@@ -27,7 +27,7 @@
                             <div class="col-album">
                                 <div class="card-190 z-reset-height">
                                         <div class="image">
-                                            <img class="top_album_image" src="<?php echo $album->getArtworkPath() ?>" alt=""  onclick="openPage('album.php?id=<?php echo $album->getId() ?>'); window.location.reload();">
+                                            <img class="top_album_image" src="<?php echo $album->getArtworkPath() ?>" alt=""  onclick="openPage('album.php?id=<?php echo $album->getId() ?>');">
                                         </div>
                                     </div>
                                 <div class="card-info">

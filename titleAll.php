@@ -1,10 +1,6 @@
 <?php
-    include("includes/config.php");
+    include("includes/includedFiles.php");
 ?>
-<?php
-    include("includes/header.php")
-?>
-
 <div class="container">
     <div class="container-list-genres">
         <?php 
@@ -22,4 +18,8 @@
             }
         ?>
     </div>
+    <?php 
+        include("includes/footer.php");
+    ?>
+    <?php include("nowPlayingBar.php"); ?>
 </div>

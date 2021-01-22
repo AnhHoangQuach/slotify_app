@@ -14,7 +14,7 @@
         <div class="column mar-b-0 item-width">
             <div class="new-release-item">
                 <div class="media">
-                <span role='link' tabindex='0' onclick='openPage("album.php?id=<?php echo $album->getId() ?>"); window.location.reload();';>
+                <span role='link' tabindex='0' onclick='openPage("album.php?id=<?php echo $album->getId() ?>");';>
                     <div class="media-left">
                         <figure class="image is-120x120" title="<?php echo $album->getTitle() ?>" onclick='openPage("album.php?id=<?php echo $album->getId() ?>")'>
                             <img src="<?php echo $album->getArtworkPath() ?>" alt="">
@@ -30,7 +30,7 @@
                         <h3 class="is-one-line subtitle">
                             <a class="">
                                 <?php echo "
-                                    <span onclick='openPage(\"artist.php?id=" . $artist->getId() . "\"); window.location.reload();'>
+                                    <span onclick='openPage(\"artist.php?id=" . $artist->getId() . "\");'>
                                         " . $artist->getName() . "
                                     </span>";
                                 ?>

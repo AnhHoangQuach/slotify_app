@@ -1,5 +1,5 @@
 <?php
-    $songQuery = mysqli_query($con, "SELECT id FROM songs ORDER BY RAND()");
+    $songQuery = mysqli_query($con, "SELECT id FROM songs");
     $resultArray = array();
 
     while($row = mysqli_fetch_array($songQuery)) {
@@ -10,10 +10,25 @@
 ?>
 
 <script>
+    console.log('start');
+    var item = localStorage.getItem('songNow');
+    var statusChange = localStorage.getItem('statusChange');
     $(document).ready(function() {
         var newPlaylist = <?php echo $jsonArray; ?>;
-        audioElement = new Audio();
-        setTrack(newPlaylist[0], newPlaylist, false);
+        if(item == null) {
+            audioElement = new Audio();
+            setTrack(newPlaylist[0], newPlaylist, false);
+            return;
+        } else {
+            if(statusChange == 1) {
+                $('.controlButton.play').show();
+                $('.controlButton.pause').hide();
+            } else {
+                $('.controlButton.pause').show();
+                $('.controlButton.play').hide();
+            }
+            continueSong(item);
+        }
         updateVolumeProgressBar(audioElement.audio);
 
         $("#nowPlayingBarContainer").on("mousedown touchstart mousemove touchmove", function(e) {
@@ -61,7 +76,6 @@
         $(document).mouseup(function() {
 		    mouseDown = false;
         });
-
     });
 
     function timeFromOffset (mouse, progressBar) {
@@ -76,6 +90,7 @@
         } else {
             currentIndex--;
             setTrack(currentPlaylist[currentIndex], currentPlaylist, true);
+            console.log('lan 2')
         }
     }
 
@@ -94,6 +109,7 @@
 
         var trackToPlay = shuffle ? shufflePlaylist[currentIndex] : currentPlaylist[currentIndex];
         setTrack(trackToPlay, currentPlaylist, true);
+            console.log('lan 3')
     }
 
     function setRepeat() {
@@ -163,12 +179,31 @@
                 $(".trackInfo .trackName span").attr("onclick", "openPage('album.php?id=" + album.id + "')");
 
             });
-
-
             audioElement.setTrack(track);
+            console.log('lan 4')
             if(play == true) {
                 playSong();
             }
+        });
+    }
+
+    function continueSong(trackId) {
+        $.post("includes/handlers/ajax/getSongJson.php", {songId: trackId}, function(data) {
+            var track = JSON.parse(data);
+            $(".trackName span").text(track.title);
+
+            $.post("includes/handlers/ajax/getArtistJson.php", {artistId: track.artist}, function(data) {
+                var artist = JSON.parse(data);
+                $(".trackInfo .artistName span").text(artist.name);
+                $(".trackInfo .artistName span").attr("onclick", "openPage('artist.php?id=" + artist.id + "')");
+            });
+
+            $.post("includes/handlers/ajax/getAlbumJson.php", {albumId: track.album}, function(data) {
+                var album = JSON.parse(data);
+                $(".content .albumLink img").attr("src", '/'+album.artworkPath);
+                $(".content .albumLink img").attr("onclick", "openPage('album.php?id=" + album.id + "')");
+                $(".trackInfo .trackName span").attr("onclick", "openPage('album.php?id=" + album.id + "')");
+            });
         });
     }
 
@@ -176,20 +211,20 @@
         if(audioElement.audio.currentTime == 0) {
             $.post("includes/handlers/ajax/updatePlays.php", { songId: audioElement.currentlyPlaying.id});
         }
-
-
         $('.controlButton.play').hide();
         $('.controlButton.pause').show();
         audioElement.play();
+        localStorage.setItem("songNow", audioElement.currentlyPlaying.id)
+        localStorage.setItem("statusChange", 2);
     }
 
     function pauseSong() {
         $('.controlButton.play').show();
         $('.controlButton.pause').hide();
         audioElement.pause();
+        localStorage.setItem("statusChange", 1);
     }
 </script>
-
 
 <div id="nowPlayingBarContainer">
     <div id="nowPlayingBar">

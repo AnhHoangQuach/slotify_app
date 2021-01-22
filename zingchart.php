@@ -50,7 +50,7 @@
                                             <div class="artist">
                                                 <a>
                                                     <?php echo "
-                                                        <span onclick='openPage(\"artist.php?id=" . $artist->getId() . "\"); window.location.reload();'>
+                                                        <span onclick='openPage(\"artist.php?id=" . $artist->getId() . "\");'>
                                                             " . $artist->getName() . "
                                                         </span>";
                                                     ?>
@@ -73,7 +73,7 @@
                             while($rows = mysqli_fetch_array($query)) {
                                 echo '
                                 <div class="col-md-3 col-xs-6 mar-bottom-15">
-                                    <span role="link" tabindex="0" onclick="openPage(\'title.php?id=' . $rows['id'] . '\'); window.location.reload();">
+                                    <span role="link" tabindex="0" onclick="openPage(\'title.php?id=' . $rows['id'] . '\');">
                                         <div class="card-210-118">
                                             <div class="lazyload-img loaded">
                                                 <img src="' . $rows['image'] . '" alt="">

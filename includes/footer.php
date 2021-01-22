@@ -13,7 +13,6 @@
 			</div>
 		</div>
 	</div>
-	<?php include("nowPlayingBar.php"); ?>
 </body>
 
 </html>

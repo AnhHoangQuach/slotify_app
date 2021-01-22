@@ -1,8 +1,5 @@
 <?php
-    include("includes/config.php");
-?>
-<?php
-    include("includes/header.php")
+    include("includes/includedFiles.php");
 ?>
 <div class="container">
     <?php 
@@ -20,3 +17,4 @@
         }
     ?>
 </div>
+<?php include("nowPlayingBar.php"); ?>

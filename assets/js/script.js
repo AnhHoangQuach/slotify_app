@@ -279,10 +279,10 @@ function Audio() {
         if (playPromise !== undefined) {
             playPromise.then(_ => {
 
-                })
-                .catch(error => {
-                    console.log("Error");
-                });
+            })
+            .catch(error => {
+                console.log("Error");
+            });
         }
     }
 

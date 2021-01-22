@@ -105,19 +105,19 @@ else {
 				<div class="z-menu-bar-inner">
 					<ul class="z-nav pri">
 						<li class="z-shrink">
-							<a href="./browse.php" class="nav-link text-upper <?php if($_SERVER['SCRIPT_NAME'] == "/browse.php") echo "active" ?>">Trang chủ</a>
+							<span onclick=openPage("browse.php") class="nav-link text-upper">Trang chủ</span>
 						</li>
 						<li>
-							<a href="./top100.php" class="nav-link text-upper  <?php if($_SERVER['SCRIPT_NAME'] == "/top100.php") echo "active" ?>">Top 100</a>
+							<span onclick=openPage("top100.php") class="nav-link text-upper">Top 100</span>
 						</li>
 						<li>
-							<a href="./titleAll.php" class="nav-link text-upper  <?php if($_SERVER['SCRIPT_NAME'] == "/titleAll.php") echo "active" ?>">Chủ đề</a>
+							<span onclick=openPage("titleAll.php") class="nav-link text-upper">Chủ đề</span>
 						</li>
 						<li>
-							<a href="./albumAll.php" class="nav-link text-upper <?php if($_SERVER['SCRIPT_NAME'] == "/albumAll.php") echo "active" ?>">Album</a>
+							<span onclick=openPage("albumAll.php") class="nav-link text-uppe">Album</span>
 						</li>
 						<li>
-							<a href="./yourMusic.php" class="nav-link text-upper  <?php if($_SERVER['SCRIPT_NAME'] == "/yourMusic.php") echo "active" ?>">Your Playlist</a>
+							<span onclick=openPage("yourMusic.php") class="nav-link text-upper">Your Playlist</span>
 						</li>
 					</ul>
 				</div>	

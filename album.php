@@ -9,6 +9,12 @@
 
     $artist = $album->getArtist();
     $userId = intval($userLoggedIn->getId());
+
+    $pageWasRefreshed = isset($_SERVER['HTTP_CACHE_CONTROL']) && $_SERVER['HTTP_CACHE_CONTROL'] === 'max-age=0';
+
+    if($pageWasRefreshed ) {
+        echo"<script>audioElement = new Audio()</script>";
+    }
 ?>
 
     <div class="container">
@@ -98,18 +104,38 @@
         <div class="comment-box">
             <div class="row">
                 <div class="col-md-12">
-                    <form action="includes/handlers/ajax/createComment.php" method="POST">
-                        <div class="form-group">
-                            <textarea id="comment" name="comment" cols="30" rows="10" class="form-control" placeholder="Your comment should be here"></textarea>
-                        </div>
-                        <input type='hidden' name="userId" value='<?php echo $userId ?>'>
-                        <input type='hidden' name="albumId" value='<?php echo $album->getId(); ?>'>
-                        <button type="submit" name="submit" value="submit" class="button-comment">Gửi comment</button>
-                    </form>
+                    <div class="form-group">
+                        <textarea id="comment" name="comment" cols="30" rows="10" class="form-control" placeholder="Your comment should be here"></textarea>
+                    </div>
+                    <input type='hidden' id="userId" value='<?php echo $userId ?>'>
+                    <input type='hidden' id="albumId" value='<?php echo $album->getId(); ?>'>
+                    <button type="submit" id="submit" name="submit" class="button-comment">Gửi comment</input>
                 </div>
             </div>
         </div>
         <?php 
             include("includes/footer.php")
         ?>
+        <?php include("nowPlayingBar.php"); ?>
     </div>
+<script>
+    $('#submit').click(function() {
+        var albumId = $('#albumId').val(); // your albumId
+        $.ajax({
+            url : 'includes/handlers/ajax/createComment.php',
+            data : {
+                comment: $("#comment").val(), // your comment
+                userId: $('#userId').val(), // your userId
+                albumId: albumId,
+            },
+            type : 'post',
+            success : function(result) {
+                alert('Comment success');
+                openPage(`album.php?id=${albumId}`);
+            },
+            error : function() {
+                alert("Error reaching the server. Check your connection");
+            }
+        });
+    })
+</script>

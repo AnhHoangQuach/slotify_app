@@ -68,4 +68,7 @@
         <?php 
             include("includes/footer.php")
         ?>
+        <?php 
+            include("nowPlayingBar.php");
+        ?>
     </div>
