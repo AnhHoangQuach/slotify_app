@@ -4,7 +4,10 @@
         $dir = __DIR__ . '/../../../assets/images/artwork/';
 		$audio_path = $dir . '/' .$_FILES['audioFile']['name']; // duong that
 		$dirTemp = '/assets/images/artwork/';
-		$audio_duration_path = $dirTemp . basename($_FILES['audioFile']['name']); // duong ao
+        $audio_duration_path = $dirTemp . basename($_FILES['audioFile']['name']); // duong ao
+        if($audio_duration_path == $dirTemp) {
+			$audio_duration_path = 'assets/images/listmusic/logoicon.jpg';
+		}
 		$title = $_POST['title'];
 		$artist = $_POST['artist'];
         $genre = $_POST['genre'];

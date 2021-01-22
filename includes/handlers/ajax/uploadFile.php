@@ -30,7 +30,7 @@
 		// audio song
 		$dir =  '../../../assets/music';
 		$audio_path = $dir . '/' .$_FILES['audioFile']['name']; // duong that
-		$dirTemp = '/assets/music/';
+		$dirTemp = 'assets/music/';
 		$audio_duration_path = $dirTemp . basename($_FILES['audioFile']['name']); // duong ao
 		$title = $_POST['title'];
 		$artist = $_POST['artist'];
@@ -42,10 +42,10 @@
 		// image song
 		$dir = '../../../assets/images/listmusic/';
 		$image_path = $dir . '/' .$_FILES['imageFile']['name']; // duong that
-		$dirTemp = '/assets/images/listmusic/';
+		$dirTemp = 'assets/images/listmusic/';
 		$image_duration_path = $dirTemp . basename($_FILES['imageFile']['name']); // duong ao
 		if($image_duration_path == $dirTemp) {
-			$image_duration_path = '/assets/images/listmusic/logoicon.jpg';
+			$image_duration_path = 'assets/images/listmusic/logoicon.jpg';
 		}
 		// query
 

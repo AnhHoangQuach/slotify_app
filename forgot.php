@@ -42,7 +42,7 @@
         $mail->WordWrap = 50; // set word wrap
         $mail->IsHTML(true); // send as HTML
         $mail->Subject = "Reset Password";
-        $mail->Body = "<b>Click vào link để xác nhận đổi mật khẩu. - <a href='http://mp3.test:8080/new-pass.php?token=" . $token . "'>Bấm vào đây</a></b>"; //HTML Body
+        $mail->Body = "<b>Click vào link để xác nhận đổi mật khẩu. - <a href='http://nah05.zing:8080/new-pass.php?token=" . $token . "'>Bấm vào đây</a></b>"; //HTML Body
         $mail->AltBody = "Reset Password"; //Text Body
         //$mail->SMTPDebug = 2;
         if(!$mail->Send()) {

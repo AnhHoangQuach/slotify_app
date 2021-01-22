@@ -32,3 +32,4 @@
         </div>
     </div>
 </div>
+<?php include("nowPlayingBar.php") ?>

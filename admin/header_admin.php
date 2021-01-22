@@ -176,7 +176,7 @@
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
         <a href="./admin.php" class="brand-link">
-            <img src="../assets/images/logo-mp-3.svg" alt="" class="brand-image" style="margin-top: -1px">
+            <img src="../assets/images/logomain.jpg" alt="" class="brand-image" style="margin-top: -1px">
             <span class="brand-text font-weight-light">NAH05</span>
         </a>
 

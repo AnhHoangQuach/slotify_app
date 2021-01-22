@@ -77,3 +77,6 @@
             <div class="item" onclick="removeFromPlaylist(this, '<?php echo $playlistId; ?>')">Remove from Playlist</div>
         </nav>
     </div>
+    <?php 
+        include("nowPlayingBar.php");
+    ?>

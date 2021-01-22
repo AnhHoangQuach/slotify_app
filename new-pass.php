@@ -19,16 +19,15 @@ if (isset($_POST['new_password'])) {
 		return;
 	} 
 	// Grab to token that came from the email link
-	$token = $_GET['token'];
+        $token = $_GET['token'];
 	  // select email address of user from the password_reset table 
 	  $sql = "SELECT email FROM users WHERE reset_token='$token'";
-	  $results = mysqli_query($con, $sql);
+      $results = mysqli_query($con, $sql);
 	  $email = mysqli_fetch_array($results)['email'];
-  
 	  if ($email) {
 		$new_pass = md5($new_pass);
 		$sql = "UPDATE users SET password='$new_pass' WHERE email='$email'";
-		$results = mysqli_query($con, $sql);
+        $results = mysqli_query($con, $sql);
 		header('Location: register.php');
 	  }
   }
