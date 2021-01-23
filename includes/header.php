@@ -53,12 +53,13 @@ else {
 			padding: 10px;
 		}
 
-		.search-list li a {
+		.search-list li span {
 			color: rgba(255,255,255,0.8);
 		}
 
-		.search-list li a:hover {
+		.search-list li span:hover {
 			color: black;
+			cursor: pointer;
 		}
 	</style>
 </head>

@@ -205,4 +205,5 @@
 
 .z-nav>li .nav-link:hover {
     color: #9877ff;
+    cursor: pointer;
 }

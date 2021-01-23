@@ -110,10 +110,10 @@
                 <div class="dataTables_paginate paging_simple_numbers" id="example1_paginate">
                     <ul class="pagination">
                         <?php 
-                                if ($current_page > 1 && $total_page > 1){
+                            if ($current_page > 1 && $total_page > 1){
                                 echo '
                                 <li class="paginate_button page-item previous" id="example2_previous">
-                                    <a class="page-link" href="top100.php?page='.($current_page-1).'">Prev</a> 
+                                    <span class="page-link" onclick=openPage("top100.php?page='.($current_page-1).'")>Prev</span> 
                                 </li>';
                             }
                     
@@ -131,7 +131,7 @@
                                 else{
                                     echo '
                                     <li class="paginate_button page-item ">
-                                        <a class="page-link" href="top100.php?page='.$i.'">'.$i.'</a>
+                                        <span class="page-link" onclick=openPage("top100.php?page='.$i.'")>'.$i.'</span>
                                     </li>';
                                 }
                             }
@@ -140,7 +140,7 @@
                             if ($current_page < $total_page && $total_page > 1){
                                 echo '
                                 <li class="paginate_button page-item ">
-                                    <a class="page-link" href="top100.php?page='.($current_page+1).'">Next</a>
+                                    <span class="page-link" onclick=openPage("top100.php?page='.($current_page+1).'")>Next</span>
                                 </li>';
                             }
                         ?>

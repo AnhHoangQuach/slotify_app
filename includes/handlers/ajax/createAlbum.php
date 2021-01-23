@@ -22,7 +22,7 @@
             }
         }
         
-        header("Location: ../../admin/listAlbums.php");
+        header("Location: ../../../admin/listAlbums.php");
     } else {
         echo "Parameters not passed into file";
     }
