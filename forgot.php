@@ -4,12 +4,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/slotify_app/assets/css/adminlte.min.css">
     <script src="/slotify_app/assets/plugins/jquery/jquery.min.js"></script>
-    <script src="/slotify_app/assets/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="/slotify_app/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <link rel="icon" href="/slotify_app/assets/images/logomain.jpg">
 </head>
 
 <?php 
-    include("/slotify_app/includes/config.php");
+    include("includes/config.php");
+    require_once  './vendor/autoload.php' ;
+
+    // The argument specifies the directory where the ".env" file is located 
+    $dotenv = Dotenv\Dotenv::createMutable(__DIR__, '.env');
+    $dotenv->load();
     use PHPMailer\PHPMailer\PHPMailer; 
     use PHPMailer\PHPMailer\Exception;
     // Base files 
@@ -30,9 +35,9 @@
         $mail->Port = 465; // set the port to use
         $mail->SMTPAuth = true; // turn on SMTP authentication
         $mail->SMTPSecure = 'ssl';
-        $mail->Username = "viethoang.vunguyen@gmail.com"; // your SMTP username or your gmail username
-        $mail->Password = "viethoang@2612"; // your SMTP password or your gmail password
-        $from = "viethoang.vunguyen@gmail.com"; // Reply to this email
+        $mail->Username = $_ENV['MAIL_NAME']; // your SMTP username or your gmail username
+        $mail->Password = $_ENV['MAIL_PASS']; // your SMTP password or your gmail password
+        $from = "skyahq13@gmail.com"; // Reply to this email
         $to=$_POST['email']; // Recipients email ID
         $name="NAH05"; // Recipient's name
         $mail->From = $from;
@@ -42,7 +47,7 @@
         $mail->WordWrap = 50; // set word wrap
         $mail->IsHTML(true); // send as HTML
         $mail->Subject = "Reset Password";
-        $mail->Body = "<b>Click vào link để xác nhận đổi mật khẩu. - <a href='http://nah05.zing:8080/new-pass.php?token=" . $token . "'>Bấm vào đây</a></b>"; //HTML Body
+        $mail->Body = "<b>Click vào link để xác nhận đổi mật khẩu. - <a href='http://localhost:80/slotify_app/new-pass.php?token=" . $token . "'>Bấm vào đây</a></b>"; //HTML Body
         $mail->AltBody = "Reset Password"; //Text Body
         //$mail->SMTPDebug = 2;
         if(!$mail->Send()) {

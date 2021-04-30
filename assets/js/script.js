@@ -82,7 +82,7 @@ function createPlaylist() {
 }
 
 function logout() {
-  $.post('../slotify_app/includes/handlers/ajax/logout.php', function () {
+  $.post('/slotify_app/includes/handlers/ajax/logout.php', function () {
     location.reload()
   })
 }

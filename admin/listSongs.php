@@ -1,8 +1,8 @@
 <?php 
-	include("/slotify_app/includes/config.php");
-	include("/slotify_app/includes/classes/Song.php");
-	include("/slotify_app/includes/classes/Artist.php");
-	include("/slotify_app/includes/classes/Album.php");
+	include("../includes/config.php");
+	include("../includes/classes/Song.php");
+	include("../includes/classes/Artist.php");
+	include("../includes/classes/Album.php");
 ?>
 <?php
     include("header_admin.php"); 

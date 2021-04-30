@@ -9,7 +9,7 @@
     <link rel="icon" href="/slotify_app/assets/images/logomain.jpg">
 </head>
 <?php
-include("/slotify_app/includes/config.php");
+include("includes/config.php");
 $info = "";
 if (isset($_POST['new_password'])) {
 	$new_pass = mysqli_real_escape_string($con, $_POST['new_pass']);

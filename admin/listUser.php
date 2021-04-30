@@ -1,6 +1,6 @@
 <?php 
-	include("/slotify_app/includes/config.php");
-	include("/slotify_app/includes/classes/User.php");
+	include("../includes/config.php");
+	include("../includes/classes/User.php");
 ?>
 <?php
     include("header_admin.php");

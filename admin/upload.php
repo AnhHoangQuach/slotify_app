@@ -1,7 +1,7 @@
 <?php 
-	include("includes/config.php");
-	include("includes/classes/Artist.php");
-	include("includes/classes/Album.php");
+	include("../includes/config.php");
+	include("../includes/classes/Artist.php");
+	include("../includes/classes/Album.php");
 ?>
 <?php
 	include("header_admin.php"); 
