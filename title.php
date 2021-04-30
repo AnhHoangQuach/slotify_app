@@ -30,7 +30,7 @@
                         $songArtist = $genreSong->getArtist();
                         echo "<li class='tracklistRow'>
                                 <div class='trackCount'>
-                                    <img class='play' src='/assets/images/icons/play-white.png' onclick='setTrack(\"" . $genreSong->getId() . "\", tempPlaylist, true);'>
+                                    <img class='play' src='/slotify_app/assets/images/icons/play-white.png' onclick='setTrack(\"" . $genreSong->getId() . "\", tempPlaylist, true);'>
                                     <span class='trackNumber'>$i</span>
                                 </div>
 
@@ -41,8 +41,8 @@
 
                                 <div class='trackOptions'>
                                     <input type='hidden' class='songId' value='" . $genreSong->getId() . "'>
-                                    <img class='optionsButton' src='/assets/images/icons/more.png' onclick='showOptionsMenu(this)'>
-                                    <a href='includes/handlers/ajax/download.php?file=" . $name[2] . "'><img src='/assets/images/icons/download.png'></a>
+                                    <img class='optionsButton' src='/slotify_app/assets/images/icons/more.png' onclick='showOptionsMenu(this)'>
+                                    <a href='/slotify_app/includes/handlers/ajax/download.php?file=" . $name[2] . "'><img src='/slotify_app/assets/images/icons/download.png'></a>
                                 </div>
 
                                 <div class='trackDuration'>

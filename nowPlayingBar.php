@@ -115,19 +115,19 @@
     function setRepeat() {
         repeat = !repeat;
         var imageName = repeat ? "repeat-active.png" : "repeat.png";
-        $(".controlButton.repeat img").attr("src", "/assets/images/icons/" + imageName);
+        $(".controlButton.repeat img").attr("src", "/slotify_app/assets/images/icons/" + imageName);
     }
 
     function setMuted() {
         audioElement.audio.muted = !audioElement.audio.muted;
         var imageName = audioElement.audio.muted ? "volume-mute.png" : "volume.png";
-        $(".controlButton.volume img").attr("src", "/assets/images/icons/" + imageName);
+        $(".controlButton.volume img").attr("src", "/slotify_app/assets/images/icons/" + imageName);
     }
 
     function setShuffle() {
         shuffle = !shuffle;
         var imageName = shuffle ? "shuffle-active.png" : "shuffle.png";
-        $(".controlButton.shuffle img").attr("src", "/assets/images/icons/" + imageName);
+        $(".controlButton.shuffle img").attr("src", "/slotify_app/assets/images/icons/" + imageName);
 
         if(shuffle == true) {
             shuffleArray(shufflePlaylist);
@@ -162,17 +162,17 @@
 
         pauseSong();
 
-        $.post("includes/handlers/ajax/getSongJson.php", {songId: trackId}, function(data) {
+        $.post("/slotify_app/includes/handlers/ajax/getSongJson.php", {songId: trackId}, function(data) {
             var track = JSON.parse(data);
             $(".trackName span").text(track.title);
 
-            $.post("includes/handlers/ajax/getArtistJson.php", {artistId: track.artist}, function(data) {
+            $.post("/slotify_app/includes/handlers/ajax/getArtistJson.php", {artistId: track.artist}, function(data) {
                 var artist = JSON.parse(data);
                 $(".trackInfo .artistName span").text(artist.name);
                 $(".trackInfo .artistName span").attr("onclick", "openPage('artist.php?id=" + artist.id + "')");
             });
 
-            $.post("includes/handlers/ajax/getAlbumJson.php", {albumId: track.album}, function(data) {
+            $.post("/slotify_app/includes/handlers/ajax/getAlbumJson.php", {albumId: track.album}, function(data) {
                 var album = JSON.parse(data);
                 $(".content .albumLink img").attr("src", '/'+album.artworkPath);
                 $(".content .albumLink img").attr("onclick", "openPage('album.php?id=" + album.id + "')");
@@ -188,19 +188,19 @@
     }
 
     function continueSong(trackId) {
-        $.post("includes/handlers/ajax/getSongJson.php", {songId: trackId}, function(data) {
+        $.post("/slotify_app/includes/handlers/ajax/getSongJson.php", {songId: trackId}, function(data) {
             var track = JSON.parse(data);
             $(".trackName span").text(track.title);
 
-            $.post("includes/handlers/ajax/getArtistJson.php", {artistId: track.artist}, function(data) {
+            $.post("/slotify_app/includes/handlers/ajax/getArtistJson.php", {artistId: track.artist}, function(data) {
                 var artist = JSON.parse(data);
                 $(".trackInfo .artistName span").text(artist.name);
                 $(".trackInfo .artistName span").attr("onclick", "openPage('artist.php?id=" + artist.id + "')");
             });
 
-            $.post("includes/handlers/ajax/getAlbumJson.php", {albumId: track.album}, function(data) {
+            $.post("/slotify_app/includes/handlers/ajax/getAlbumJson.php", {albumId: track.album}, function(data) {
                 var album = JSON.parse(data);
-                $(".content .albumLink img").attr("src", '/'+album.artworkPath);
+                $(".content .albumLink img").attr("src", album.artworkPath);
                 $(".content .albumLink img").attr("onclick", "openPage('album.php?id=" + album.id + "')");
                 $(".trackInfo .trackName span").attr("onclick", "openPage('album.php?id=" + album.id + "')");
             });
@@ -209,7 +209,7 @@
 
     function playSong() {
         if(audioElement.audio.currentTime == 0) {
-            $.post("includes/handlers/ajax/updatePlays.php", { songId: audioElement.currentlyPlaying.id});
+            $.post("/slotify_app/includes/handlers/ajax/updatePlays.php", { songId: audioElement.currentlyPlaying.id});
         }
         $('.controlButton.play').hide();
         $('.controlButton.pause').show();
@@ -248,22 +248,22 @@
             <div class="content playerControls">
                 <div class="buttons">
                     <button class="controlButton shuffle" title="Shuffle button" onclick="setShuffle();">
-                        <img src="/assets/images/icons/shuffle.png" alt="Shuffle">
+                        <img src="/slotify_app/assets/images/icons/shuffle.png" alt="Shuffle">
                     </button>
                     <button class="controlButton previous" title="Previous button" onclick="prevSong();">
-                        <img src="/assets/images/icons/previous.png" alt="Previous">
+                        <img src="/slotify_app/assets/images/icons/previous.png" alt="Previous">
                     </button>
                     <button class="controlButton play" title="Play button" onclick="playSong();">
-                        <img src="/assets/images/icons/play.png" alt="Play">
+                        <img src="/slotify_app/assets/images/icons/play.png" alt="Play">
                     </button>
                     <button class="controlButton pause" title="Pause button" style="display: none;" onclick="pauseSong();">
-                        <img src="/assets/images/icons/pause.png" alt="Pause">
+                        <img src="/slotify_app/assets/images/icons/pause.png" alt="Pause">
                     </button>
                     <button class="controlButton next" title="Next button" onclick="nextSong();">
-                        <img src="/assets/images/icons/next.png" alt="Next">
+                        <img src="/slotify_app/assets/images/icons/next.png" alt="Next">
                     </button>
                     <button class="controlButton repeat" title="Repeat button" onclick="setRepeat();">
-                        <img src="/assets/images/icons/repeat.png" alt="Repeat">
+                        <img src="/slotify_app/assets/images/icons/repeat.png" alt="Repeat">
                     </button>
                 </div>
 
@@ -281,7 +281,7 @@
         <div id="nowPlayingRight">
             <div class="volumeBar">
                 <button class="controlButton volume" title="Volume button" onclick="setMuted();">
-                    <img src="/assets/images/icons/volume.png" alt="Volume">
+                    <img src="/slotify_app/assets/images/icons/volume.png" alt="Volume">
                 </button>
 
                 <div class="progressBar">

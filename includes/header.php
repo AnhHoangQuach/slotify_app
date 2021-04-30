@@ -13,7 +13,7 @@ if(isset($_SESSION['userLoggedIn'])) {
 	$username = $userLoggedIn->getUsername();
 	$role = $userLoggedIn->getRole();
 	if($role == 1) {
-		header("Location: ../admin/admin.php");
+		header("Location: /slotify_app/admin/admin.php");
 	}
 	echo "<script>userLoggedIn = '$username';</script>";
 }
@@ -26,18 +26,18 @@ else {
 <html>
 <head>
 	<title>NAH05</title>
-	<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
-	<link rel="stylesheet" type="text/css" href="../assets/css/register.css">
-	<link rel="stylesheet" type="text/css" href="../assets/css/util.css">
-	<link rel="stylesheet" type="text/css" href="../assets/css/main.css">
-	<link rel="stylesheet" type="text/css" href="../assets/css/header.css">
-	<link rel="stylesheet" type="text/css" href="../assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="../assets/slick/slick.css"/>
-	<link rel="stylesheet" type="text/css" href="../assets/slick/slick-theme.css"/>
-	<link rel="icon" href="../assets/images/logomain.jpg">
-	<script src="../vendor/jquery/jquery-3.2.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/slotify_app/assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/slotify_app/assets/css/register.css">
+	<link rel="stylesheet" type="text/css" href="/slotify_app/assets/css/util.css">
+	<link rel="stylesheet" type="text/css" href="/slotify_app/assets/css/main.css">
+	<link rel="stylesheet" type="text/css" href="/slotify_app/assets/css/header.css">
+	<link rel="stylesheet" type="text/css" href="/slotify_app/assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/slotify_app/assets/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="/slotify_app/assets/slick/slick-theme.css"/>
+	<link rel="icon" href="/slotify_app/assets/images/logomain.jpg">
+	<script src="/slotify_app/vendor/jquery/jquery-3.2.1.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-	<script src="../assets/js/script.js"></script>
+	<script src="/slotify_app/assets/js/script.js"></script>
 	<style>
 		#result_index {
             position: absolute;
@@ -69,7 +69,7 @@ else {
 		<div class="header__top-bar">
 			<div class="header__top-bar-inner">
 				<a href="browse.php">
-					<img src="../assets/images/logomain.jpg" class="logo-login" alt="">
+					<img src="/slotify_app/assets/images/logomain.jpg" class="logo-login" alt="">
 				</a>
 				<div class="header__menu-bar-search">
 					<form action="">
@@ -96,7 +96,7 @@ else {
 					<div class="z-login-wrap pull-right mar-left-10">
 						<div class="z-card card-40">
 							<div class="thumb-40" onclick="openPage('settings.php')">
-								<img src="/assets/images/profile-pics/head_emerald.png" alt="">
+								<img src="/slotify_app/assets/images/profile-pics/head_emerald.png" alt="">
 							</div>
 						</div>
 					</div>

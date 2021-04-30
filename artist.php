@@ -36,7 +36,7 @@
                     $albumArtist = $albumSong->getArtist();
                     echo "<li class='tracklistRow'>
                             <div class='trackCount'>
-                                <img class='play' src='/assets/images/icons/play-white.png' onclick='setTrack(\"" . $albumSong->getId() . "\", tempPlaylist, true);'>
+                                <img class='play' src='/slotify_app/assets/images/icons/play-white.png' onclick='setTrack(\"" . $albumSong->getId() . "\", tempPlaylist, true);'>
                                 <span class='trackNumber'>$i</span>
                             </div>
 
@@ -47,8 +47,8 @@
 
                             <div class='trackOptions'>
                                 <input type='hidden' class='songId' value='" . $albumSong->getId() . "'>
-                                <img class='optionsButton' src='/assets/images/icons/more.png' onclick='showOptionsMenu(this)'>
-                                <a href='includes/handlers/ajax/download.php?file=" . $name[2] . "'><img src='/assets/images/icons/download.png'></a>
+                                <img class='optionsButton' src='/slotify_app/assets/images/icons/more.png' onclick='showOptionsMenu(this)'>
+                                <a href='/slotify_app/includes/handlers/ajax/download.php?file=" . $name[2] . "'><img src='/slotify_app/assets/images/icons/download.png'></a>
                             </div>
 
                             <div class='trackDuration'>
@@ -75,7 +75,7 @@
 
                 echo "<div class='gridViewItem  artist-album'>
                         <span role='link' tabindex='0' onclick='openPage(\"album.php?id=" . $row['id'] . "\");'>
-                            <img src='../" . $row['artworkPath'] . "'>
+                            <img src='" . $row['artworkPath'] . "'>
                             <div class='gridViewInfo'>
                                 " . $row['title'] . "
                             </div>

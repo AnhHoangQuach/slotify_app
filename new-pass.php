@@ -3,13 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Password Reset PHP</title>
-	<link rel="stylesheet" href="/assets/css/adminlte.min.css">
-    <script src="/assets/plugins/jquery/jquery.min.js"></script>
-    <script src="/assets/plugins/bootstrap/bootstrap.min.js"></script>
-    <link rel="icon" href="/assets/images/logomain.jpg">
+	<link rel="stylesheet" href="/slotify_app/assets/css/adminlte.min.css">
+    <script src="/slotify_app/assets/plugins/jquery/jquery.min.js"></script>
+    <script src="/slotify_app/assets/plugins/bootstrap/bootstrap.min.js"></script>
+    <link rel="icon" href="/slotify_app/assets/images/logomain.jpg">
 </head>
 <?php
-include("includes/config.php");
+include("/slotify_app/includes/config.php");
 $info = "";
 if (isset($_POST['new_password'])) {
 	$new_pass = mysqli_real_escape_string($con, $_POST['new_pass']);

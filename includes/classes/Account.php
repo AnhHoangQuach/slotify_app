@@ -49,7 +49,7 @@
 
 		private function insertUserDetails($un, $fn, $em, $pw) {
 			$encryptedPw = md5($pw);
-			$profilePic = "/assets/images/profile-pics/head_emerald.png";
+			$profilePic = "/slotify_app/assets/images/profile-pics/head_emerald.png";
 			$date = date("Y-m-d");
 
 			$result = mysqli_query($this->con, "INSERT INTO users VALUES ('', '$un', '$fn', '$em', '$encryptedPw', '$date', '$profilePic', 0, '')");

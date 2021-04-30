@@ -10,7 +10,7 @@
                 <div class="col-3">
                     <div class="zm-card-image">
                         <figure class="image bg-image">
-                            <img class="is-256x135" src="/' . $row['image'] . '" alt="">
+                            <img class="is-256x135" src="' . $row['image'] . '" alt="">
                         </figure>
                     </div>
                 </div>

@@ -2,7 +2,7 @@
     include("includes/includedFiles.php");
 ?>
 <head>
-    <link rel="stylesheet" href="../assets/css/adminlte.min.css">
+    <link rel="stylesheet" href="/slotify_app/assets/css/adminlte.min.css">
     <style>
         .progress {
             background-color: #a0a0a0;
@@ -59,13 +59,13 @@
                 <b>Nhạc Trẻ</b> 
                 hay nhất trên NAH05</h2>
             <a href="top100.php?sort=desc" id="sortBtn" title="Giảm danh sách">
-                <img src="/assets/images/icons/desc.jpg" class="desc_btn_sort">
+                <img src="/slotify_app/assets/images/icons/desc.jpg" class="desc_btn_sort">
             </a>
             <a href="top100.php?sort=asc" id="sortBtn" title="Tăng danh sách">
-                <img src="/assets/images/icons/asc.jpg" class="asc_btn_sort">
+                <img src="/slotify_app/assets/images/icons/asc.jpg" class="asc_btn_sort">
             </a>
             <button class="active_play" title="Nghe toàn bộ">
-                <img src="/assets/images/icons/play-white.png" class="icon_playall" onclick="playFirstSong()">Nghe toàn bộ
+                <img src="/slotify_app/assets/images/icons/play-white.png" class="icon_playall" onclick="playFirstSong()">Nghe toàn bộ
             </button>
         </div>
         <div class="box-resource-slide">
@@ -82,15 +82,15 @@
                         <span class='chart-tw " . (($temp == 1) ? 'special-1' :  (($song->getId() == 2) ? 'special-2' : (($song->getId() == 3) ? 'special-3' : '')))  . "'>" . $song->getId() . "</span>                                
                         <div class='box-field-info'>
                             <div class='box-image'>
-                                <img class='is-60x60' src='../" . $song->getImage() . "' alt=''>
+                                <img class='is-60x60' src='" . $song->getImage() . "' alt=''>
                             </div>
                             <div class='box-text-info'>
                                 <div class='box-title-music'>" . $song->getTitle() . "</div>
                                 <span onclick='openPage(\"artist.php?id=" . $artist->getId() . "\");' class='box-artist'>" . $artist->getName() . "</span>
                             </div>
                             <div class='box-play'>
-                                <a href='includes/handlers/ajax/download.php?file=" . $name[2] . "'><img class='download-button' src='/assets/images/icons/download.png'></a>
-                                <img class='box-play-button' src='/assets/images/icons/play-white.png' onclick='setTrack(\"" . $song->getId() . "\", tempPlaylist, true);'>
+                                <a href='/slotify_app/includes/handlers/ajax/download.php?file=" . $name[2] . "'><img class='download-button' src='/slotify_app/assets/images/icons/download.png'></a>
+                                <img class='box-play-button' src='/slotify_app/assets/images/icons/play-white.png' onclick='setTrack(\"" . $song->getId() . "\", tempPlaylist, true);'>
                             </div>
                         </div>
                         </li>";

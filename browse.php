@@ -4,13 +4,13 @@
 		<div class="container">
 			<div class="slick-list">
 				<div class="slick-track">
-					<img src="/assets/images/slide/slide1.jpg" alt="">
+					<img src="/slotify_app/assets/images/slide/slide1.jpg" alt="">
 				</div>
 				<div class="slick-track">
-					<img src="/assets/images/slide/slide2.jpg" alt="">
+					<img src="/slotify_app/assets/images/slide/slide2.jpg" alt="">
 				</div>
 				<div class="slick-track">
-					<img src="/assets/images/slide/slide3.jpg" width="1026px" height="343px" alt="">
+					<img src="/slotify_app/assets/images/slide/slide3.jpg" width="1026px" height="343px" alt="">
 				</div>
 			</div>
 			<?php 
@@ -22,7 +22,7 @@
 			<?php 
 				include("zingrelease.php")
 			?>
-		<script type="text/javascript" src="/assets/slick/slick.min.js"></script>
+		<script type="text/javascript" src="/slotify_app/assets/slick/slick.min.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
 				$('.slick-list').slick({

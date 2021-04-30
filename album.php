@@ -20,7 +20,7 @@
     <div class="container">
         <div class="entityInfo">
             <div class="leftSection">
-                <img src="/<?php echo $album->getArtworkPath(); ?>" alt="">
+                <img src="<?php echo $album->getArtworkPath(); ?>" alt="">
             </div>
             <div class="rightSection">
                 <h2><?php echo $album->getTitle(); ?></h2>
@@ -40,7 +40,7 @@
                         $albumArtist = $albumSong->getArtist();
                         echo "<li class='tracklistRow'>
                                 <div class='trackCount'>
-                                    <img class='play' src='/assets/images/icons/play-white.png' onclick='setTrack(\"" . $albumSong->getId() . "\", tempPlaylist, true);'>
+                                    <img class='play' src='/slotify_app/assets/images/icons/play-white.png' onclick='setTrack(\"" . $albumSong->getId() . "\", tempPlaylist, true);'>
                                     <span class='trackNumber'>$i</span>
                                 </div>
 
@@ -51,8 +51,8 @@
 
                                 <div class='trackOptions'>
                                     <input type='hidden' class='songId' value='" . $albumSong->getId() . "'>
-                                    <img class='optionsButton' src='/assets/images/icons/more.png' onclick='showOptionsMenu(this)'>
-                                    <a href='includes/handlers/ajax/download.php?file=" . $name[2] . "'><img src='/assets/images/icons/download.png'></a>
+                                    <img class='optionsButton' src='/slotify_app/assets/images/icons/more.png' onclick='showOptionsMenu(this)'>
+                                    <a href='includes/handlers/ajax/download.php?file=" . $name[2] . "'><img src='/slotify_app/assets/images/icons/download.png'></a>
                                 </div>
 
                                 <div class='trackDuration'>
@@ -91,7 +91,7 @@
             ?>
             <div class="row single-comment">
                 <div class="col-md-2">
-                    <img src="/assets/images/profile-pics/head_emerald.png" class="img-circle">
+                    <img src="/slotify_app/assets/images/profile-pics/head_emerald.png" class="img-circle">
                 </div>
                 <div class="col-md-10">
                     <h4><?php echo $username['username'] ?></h4>
@@ -122,7 +122,7 @@
     $('#submit').click(function() {
         var albumId = $('#albumId').val(); // your albumId
         $.ajax({
-            url : 'includes/handlers/ajax/createComment.php',
+            url : '../slotify_app/includes/handlers/ajax/createComment.php',
             data : {
                 comment: $("#comment").val(), // your comment
                 userId: $('#userId').val(), // your userId

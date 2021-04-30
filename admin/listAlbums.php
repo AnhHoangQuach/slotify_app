@@ -1,8 +1,8 @@
 <?php 
-	include("../includes/config.php");
-	include("../includes/classes/Song.php");
-	include("../includes/classes/Artist.php");
-	include("../includes/classes/Album.php");
+	include("/slotify_app/includes/config.php");
+	include("/slotify_app/includes/classes/Song.php");
+	include("/slotify_app/includes/classes/Artist.php");
+	include("/slotify_app/includes/classes/Album.php");
 ?>
 <?php
     include("header_admin.php");
@@ -85,7 +85,7 @@
                                             <td><?php echo $album->getArtist()->getName() ?></td>
                                             <td><?php echo $album->getGenreName() ?></td>
                                             <td>
-                                                <img style="width: 50px;height: 50px" src="../<?php echo $album->getArtworkPath() ?>" alt="">
+                                                <img style="width: 50px;height: 50px" src="/slotify_app/<?php echo $album->getArtworkPath() ?>" alt="">
                                             </td>
                                             <td>
                                                 <button class="btn btn-warning" data-toggle="modal" type="button" data-target="#album<?php echo $album->getId()?>">Edit</button>
@@ -104,7 +104,7 @@
                                             <td><?php echo $album->getArtist()->getName() ?></td>
                                             <td><?php echo $album->getGenreName() ?></td>
                                             <td>
-                                                <img style="width: 50px;height: 50px" src="../<?php echo $album->getArtworkPath() ?>" alt="">
+                                                <img style="width: 50px;height: 50px" src="/slotify_app/<?php echo $album->getArtworkPath() ?>" alt="">
                                             </td>
                                             <td>
                                                 <button class="btn btn-warning" data-toggle="modal" type="button" data-target="#album<?php echo $album->getId()?>">Edit</button>

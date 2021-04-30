@@ -1,7 +1,7 @@
 <?php 
-	include("../includes/config.php");
-	include("../includes/classes/Artist.php");
-	include("../includes/classes/Album.php");
+	include("includes/config.php");
+	include("includes/classes/Artist.php");
+	include("includes/classes/Album.php");
 ?>
 <?php
 	include("header_admin.php"); 
@@ -73,6 +73,7 @@
 										<label for="inputFile">File Audio</label>
 										<div class="input-group">
 											<input type="file" class="" id="inputFile" name="audioFile">
+											<button onclick="uploadAudio()">Upload Audio</button>
 										</div>
 									</div>
 									<div class="form-group">
@@ -97,3 +98,8 @@
 <?php 
     include("footer_admin.php");
 ?>
+<script>
+	function uploadAudio() {
+
+	}
+</script>

@@ -8,21 +8,21 @@
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="../assets/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="/slotify_app/assets/plugins/fontawesome-free/css/all.min.css">
     <!-- overlayScrollbars -->
-    <link rel="stylesheet" href="../assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="/slotify_app/assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="../assets/css/adminlte.min.css">
-    <link rel="stylesheet" href="../assets/css/admin.css">
-    <link rel="icon" href="../assets/images/logomain.jpg">
+    <link rel="stylesheet" href="/slotify_app/assets/css/adminlte.min.css">
+    <link rel="stylesheet" href="/slotify_app/assets/css/admin.css">
+    <link rel="icon" href="/slotify_app/assets/images/logomain.jpg">
     <!-- REQUIRED SCRIPTS -->
     <!-- jQuery -->
-    <script src="../assets/plugins/jquery/jquery.min.js"></script>
+    <script src="/slotify_app/assets/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/slotify_app/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- overlayScrollbars -->	
-    <script src="../assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-    <script src="../assets/js/script.js"></script>
+    <script src="/slotify_app/assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <script src="/slotify_app/assets/js/script.js"></script>
     <style>
         #result {
             position: absolute;
@@ -64,7 +64,7 @@
                 <a href="/" class="nav-link">Home</a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
-				<a class="nav-link" onclick="logout(), openPage('../register.php')">Log out</a>
+				<a class="nav-link" onclick="logout(), openPage('/slotify_app/register.php')">Log out</a>
             </li>
         </ul>
 
@@ -93,7 +93,7 @@
                 <a href="#" class="dropdown-item">
                     <!-- Message Start -->
                     <div class="media">
-                    <img src="../assets/images/profile-pics/head_emerald.png" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                    <img src="/slotify_app/assets/images/profile-pics/head_emerald.png" alt="User Avatar" class="img-size-50 mr-3 img-circle">
                     <div class="media-body">
                         <h3 class="dropdown-item-title">
                         Brad Diesel
@@ -109,7 +109,7 @@
                 <a href="#" class="dropdown-item">
                     <!-- Message Start -->
                     <div class="media">
-                        <img src="../assets/images/profile-pics/head_emerald.png" alt="User Avatar" class="img-size-50 img-circle mr-3">
+                        <img src="/slotify_app/assets/images/profile-pics/head_emerald.png" alt="User Avatar" class="img-size-50 img-circle mr-3">
                         <div class="media-body">
                             <h3 class="dropdown-item-title">
                             John Pierce
@@ -125,7 +125,7 @@
                 <a href="#" class="dropdown-item">
                     <!-- Message Start -->
                     <div class="media">
-                        <img src="../assets/images/profile-pics/head_emerald.png" alt="User Avatar" class="img-size-50 img-circle mr-3">
+                        <img src="/slotify_app/assets/images/profile-pics/head_emerald.png" alt="User Avatar" class="img-size-50 img-circle mr-3">
                         <div class="media-body">
                             <h3 class="dropdown-item-title">
                             Nora Silvester
@@ -176,7 +176,7 @@
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
         <a href="./admin.php" class="brand-link">
-            <img src="../assets/images/logomain.jpg" alt="" class="brand-image" style="margin-top: -1px">
+            <img src="/slotify_app/assets/images/logomain.jpg" alt="" class="brand-image" style="margin-top: -1px">
             <span class="brand-text font-weight-light">NAH05</span>
         </a>
 
@@ -233,7 +233,7 @@
                 load_data();
                 function load_data(query) {
                     $.ajax({
-                        url:"../includes/handlers/ajax/searchAdmin.php",
+                        url:"/slotify_app/includes/handlers/ajax/searchAdmin.php",
                         method:"post",
                         data:{query:query},
                         success:function(data)

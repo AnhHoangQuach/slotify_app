@@ -19,17 +19,17 @@
 <head>
 	<title>NAH05</title>
 
-	<link rel="stylesheet" type="text/css" href="/assets/css/register.css">
-	<link rel="stylesheet" type="text/css" href="/assets/css/util.css">
-	<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
-	<link rel="stylesheet" type="text/css" href="../vendor/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="/assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="/assets/fonts/iconic/css/material-design-iconic-font.min.css">
-	<link rel="stylesheet" type="text/css" href="../vendor/animate/animate.css">
-	<link rel="icon" href="../assets/images/logomain.jpg">
-	<script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
-	<script src="/assets/js/login.js"></script>
-	<script src="/assets/js/register.js"></script>
+	<link rel="stylesheet" type="text/css" href="/slotify_app/assets/css/register.css">
+	<link rel="stylesheet" type="text/css" href="/slotify_app/assets/css/util.css">
+	<link rel="stylesheet" type="text/css" href="/slotify_app/assets/css/main.css">
+	<link rel="stylesheet" type="text/css" href="/slotify_app/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/slotify_app/assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/slotify_app/assets/fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="/slotify_app/vendor/animate/animate.css">
+	<link rel="icon" href="/slotify_app/assets/images/logomain.jpg">
+	<script src="/slotify_app/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="/slotify_app/assets/js/login.js"></script>
+	<script src="/slotify_app/assets/js/register.js"></script>
 </head>
 <body>
 	<?php
@@ -54,12 +54,12 @@
 	?>
 	
 	<div class="limiter">
-		<div class="container-login100" style="background-image: url('/assets/images/bg-01.jpg');">
+		<div class="container-login100" style="background-image: url('/slotify_app/assets/images/bg-01.jpg');">
 			<div class="wrap-login100 p-l-30 p-r-30 p-t-20">
 				<form id="loginForm" class="login100-form validate-form" action="./register.php" method="POST">
 					<div class="login_header">
 						<a href="/">
-							<img src="../assets/images/logomain.jpg" class="logo-login" alt="">
+							<img src="/slotify_app/assets/images/logomain.jpg" class="logo-login" alt="">
 						</a>
 						<span class="login100-form-title">
 							Login
@@ -81,7 +81,7 @@
 					</div>
 					
 					<div class="text-right p-t-10 p-b-20">
-						<a href="../forgot.php">
+						<a href="/slotify_app/forgot.php">
 							Forgot password?
 						</a>
 					</div>
@@ -103,7 +103,7 @@
 				<form id="registerForm" class="login100-form validate-form" action="register.php" method="POST">
 					<div class="login_header">
 						<a href="/">
-							<img src="../assets/images/logomain.jpg" class="logo-login" alt="">
+							<img src="/slotify_app/assets/images/logomain.jpg" class="logo-login" alt="">
 						</a>
 						<span class="login100-form-title">
 							Register
@@ -187,7 +187,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="/vendor/bootstrap/js/popper.js"></script>
-	<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/slotify_app/vendor/bootstrap/js/popper.js"></script>
+	<script src="/slotify_app/vendor/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

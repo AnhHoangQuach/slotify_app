@@ -2,14 +2,14 @@
     <title>Forgot Password</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/assets/css/adminlte.min.css">
-    <script src="/assets/plugins/jquery/jquery.min.js"></script>
-    <script src="/assets/plugins/bootstrap/bootstrap.min.js"></script>
-    <link rel="icon" href="/assets/images/logomain.jpg">
+    <link rel="stylesheet" href="/slotify_app/assets/css/adminlte.min.css">
+    <script src="/slotify_app/assets/plugins/jquery/jquery.min.js"></script>
+    <script src="/slotify_app/assets/plugins/bootstrap/bootstrap.min.js"></script>
+    <link rel="icon" href="/slotify_app/assets/images/logomain.jpg">
 </head>
 
 <?php 
-    include("includes/config.php");
+    include("/slotify_app/includes/config.php");
     use PHPMailer\PHPMailer\PHPMailer; 
     use PHPMailer\PHPMailer\Exception;
     // Base files 

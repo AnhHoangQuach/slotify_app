@@ -21,7 +21,7 @@
                 
                     echo "<div class='gridViewItem' role='link' tabindex='0' onclick='openPage(\"playlist.php?id=" . $playlist->getId() . "\")'>
                             <div class='playlistImage'>
-                                <img src='/assets/images/icons/playlist.png'>
+                                <img src='/slotify_app/assets/images/icons/playlist.png'>
                             </div>
                             <div class='gridViewInfo'>
                                 " . $playlist->getName() . "

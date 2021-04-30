@@ -39,7 +39,7 @@
                         <div>
                             <span class="order">#<?php echo $i ?></span>
                             <span class="release-date"><?php echo $row['TongComment'] ?>
-                                <img src="/assets/images/icons/comment.png"> 
+                                <img src="/slotify_app/assets/images/icons/comment.png"> 
                             </span>
                         </div>
                     </div>
@@ -91,21 +91,21 @@
     <div class="member-info">
         <div class="staff-item text-center">
             <div class="image-wrapper">
-                <img src="/assets/images/members/hoanganh.png" alt="" class="img-member">
+                <img src="/slotify_app/assets/images/members/hoanganh.png" alt="" class="img-member">
             </div>
             <p class="name">Quách Hoàng Anh</p>
             <p class="position">IT Engineer</p>
         </div>
         <div class="staff-item text-center">
             <div class="image-wrapper">
-                <img src="/assets/images/members/ngan.jpg" alt="" class="img-member">
+                <img src="/slotify_app/assets/images/members/ngan.jpg" alt="" class="img-member">
             </div>
             <p class="name">Đinh Thị Ngân</p>
             <p class="position">IT Engineer</p>
         </div>
         <div class="staff-item text-center">
             <div class="image-wrapper">
-                <img src="/assets/images/members/hoang.jpg" alt="" class="img-member">
+                <img src="/slotify_app/assets/images/members/hoang.jpg" alt="" class="img-member">
             </div>
             <p class="name">Vũ Nguyễn Việt Hoàng</p>
             <p class="position">IT Engineer</p>
