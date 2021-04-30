@@ -180,7 +180,6 @@
 
             });
             audioElement.setTrack(track);
-            console.log('lan 4')
             if(play == true) {
                 playSong();
             }

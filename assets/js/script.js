@@ -135,7 +135,7 @@ function deletePlaylist(playlistId) {
 function deleteAlbum(albumId) {
   var prompt = confirm('Are you sure you want to delete this album?')
   if (prompt == true) {
-    $.post('../slotify_app/includes/handlers/ajax/deleteAlbum.php', { albumId: albumId }).done(
+    $.post('../../slotify_app/includes/handlers/ajax/deleteAlbum.php', { albumId: albumId }).done(
       function (error) {
         if (error != '') {
           alert(error)
@@ -151,7 +151,7 @@ function deleteAlbum(albumId) {
 function deleteSong(songId) {
   var prompt = confirm('Are you sure you want to delete this song?')
   if (prompt == true) {
-    $.post('../slotify_app/includes/handlers/ajax/deleteSong.php', { songId: songId }).done(
+    $.post('../../slotify_app/includes/handlers/ajax/deleteSong.php', { songId: songId }).done(
       function (error) {
         if (error != '') {
           alert(error)
@@ -167,7 +167,7 @@ function deleteSong(songId) {
 function deleteGenre(genreId) {
   var prompt = confirm('Are you sure you want to delete this song?')
   if (prompt == true) {
-    $.post('../slotify_app/includes/handlers/ajax/deleteGenre.php', { genreId: genreId }).done(
+    $.post('../../slotify_app/includes/handlers/ajax/deleteGenre.php', { genreId: genreId }).done(
       function (error) {
         if (error != '') {
           alert(error)
@@ -183,23 +183,23 @@ function deleteGenre(genreId) {
 function deleteArtist(artistId) {
   var prompt = confirm('Are you sure you want to delete this artist?')
   if (prompt == true) {
-    $.post('../slotify_app/includes/handlers/ajax/deleteArtist.php', { artistId: artistId }).done(
-      function (error) {
-        if (error != '') {
-          alert(error)
-          return
-        }
-        openPage('./listArtists.php')
-        location.reload()
+    $.post('../../slotify_app/includes/handlers/ajax/deleteArtist.php', {
+      artistId: artistId,
+    }).done(function (error) {
+      if (error != '') {
+        alert(error)
+        return
       }
-    )
+      openPage('./listArtists.php')
+      location.reload()
+    })
   }
 }
 
 function deleteUser(userId) {
   var prompt = confirm('Are you sure you want to delete this user?')
   if (prompt == true) {
-    $.post('../slotify_app/includes/handlers/ajax/deleteUser.php', { userId: userId }).done(
+    $.post('../../slotify_app/includes/handlers/ajax/deleteUser.php', { userId: userId }).done(
       function (error) {
         if (error != '') {
           alert(error)
