@@ -23,6 +23,30 @@
     <!-- overlayScrollbars -->	
     <script src="/slotify_app/assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
     <script src="/slotify_app/assets/js/script.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-storage.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyBsnIVcp5dbfcat2de-ewkyfDEOPZEy5E8",
+            authDomain: "slotify-app-27ac1.firebaseapp.com",
+            projectId: "slotify-app-27ac1",
+            storageBucket: "slotify-app-27ac1.appspot.com",
+            messagingSenderId: "1004944716100",
+            appId: "1:1004944716100:web:d9623be9603155b107a711",
+            measurementId: "G-987L31M9K8"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
     <style>
         #result {
             position: absolute;
@@ -228,7 +252,7 @@
 				</ul>
 			</nav>
 		</div>
-        <script>
+        <>
             $(document).ready(function(){
                 load_data();
                 function load_data(query) {
@@ -252,6 +276,6 @@
                     }
                 });
             });
-        </script>
+        </>
         <!-- /.sidebar -->
     </aside>

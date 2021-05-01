@@ -10,7 +10,6 @@
 ?>
 
 <script>
-    console.log('start');
     var item = localStorage.getItem('songNow');
     var statusChange = localStorage.getItem('statusChange');
     $(document).ready(function() {
@@ -90,7 +89,6 @@
         } else {
             currentIndex--;
             setTrack(currentPlaylist[currentIndex], currentPlaylist, true);
-            console.log('lan 2')
         }
     }
 
@@ -109,7 +107,6 @@
 
         var trackToPlay = shuffle ? shufflePlaylist[currentIndex] : currentPlaylist[currentIndex];
         setTrack(trackToPlay, currentPlaylist, true);
-            console.log('lan 3')
     }
 
     function setRepeat() {
@@ -174,7 +171,7 @@
 
             $.post("/slotify_app/includes/handlers/ajax/getAlbumJson.php", {albumId: track.album}, function(data) {
                 var album = JSON.parse(data);
-                $(".content .albumLink img").attr("src", '/'+album.artworkPath);
+                $(".content .albumLink img").attr("src", album.artworkPath);
                 $(".content .albumLink img").attr("onclick", "openPage('album.php?id=" + album.id + "')");
                 $(".trackInfo .trackName span").attr("onclick", "openPage('album.php?id=" + album.id + "')");
 
